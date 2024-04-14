@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Agenda Telefónica</title>
+</head>
+<body>
+    <header id="header"> MI &nbsp;AGENDA &nbsp; TELEFÓNICA </header>
+
+    <div class="inputs_box">
+        <h2 id="title_inputs">DATOS DE NUEVO CONTACTO</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" placeholder="Nombre..." id="nombre">
+        <br> <br> <br>
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" placeholder="Apellidos..." id="apellidos">
+        <br> <br> <br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" placeholder="Número de teléfono..." id="telefono">
+        <br> <br> <br>
+
+        <button class="btnControls box1" id="guardarBtn">GUARDAR DATOS</button>
+        <br> <br> <br> 
+        <button class="btnControls box1" id="mostrarBtn">MOSTRAR CONTACTOS</button>
+        <br> <br> <br>
+        <button class="btnControls box1" id="ordenarNombreBtn">ORDENAR POR NOMBRE</button>
+        <br> <br> <br>
+        <button class="btnControls box1" id="ordenarApellidosBtn">ORDENAR POR APELLIDOS</button>
+    </div>
+
+    <div id="listaContactos"></div>
+
+    <script type="module" src="./controllers/index.js"></script>
+</body>
+</html>
