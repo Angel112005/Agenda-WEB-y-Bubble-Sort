@@ -1,5 +1,4 @@
 import {Node} from "./Node.js"
-// import {Node} from
 
 export class LinkedList {
     constructor() {

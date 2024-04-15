@@ -1,0 +1,120 @@
+body{
+    background: radial-gradient(rgb(144, 143, 143), rgb(76, 81, 82), rgb(4, 4, 4));
+    margin: 0;
+}
+
+header{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 250%;
+    letter-spacing: 7px;
+    background: linear-gradient(to right, #6ec4f3, lightgreen, #f450f4);
+}
+
+.text{
+    font-size: 130%;
+}
+
+.main_box {
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start;    
+    padding: 20px;              
+    margin: 10px;               
+}
+
+
+.inputs_box, .buttons_box, #listaContactos {
+    flex: 1;                    
+    padding: 10px;              
+    margin: 15px;               
+}
+
+.inputs_box {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;        
+    text-align: center;
+    border-radius: 10%;
+    background: linear-gradient(40deg,rgb(161, 194, 226),rgb(247, 172, 210),lightyellow,rgb(214, 253, 151));
+    font-size: larger;
+}
+
+#listaContactos {
+    border-radius: 60px;
+    font-weight: bold;
+    font-size: 120%;
+    min-height: 200px;          
+    padding: 15px;
+    padding-left: 5%;           
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: linear-gradient(40deg,lightslategray,rgb(232, 222, 78),rgb(32, 225, 216),rgb(206, 66, 245));
+}
+
+.buttons_box {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    text-align: center;
+    background: linear-gradient(40deg,rgb(53, 141, 229),rgb(192, 217, 52),rgb(213, 142, 44),rgb(66, 188, 215));
+}
+
+.btnControls{
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    width: 15em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.btnControls:hover{
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani{
+    0%{
+        background-position: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+
+.btnControls:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btnControls:hover::before{
+    filter: blur(20px);
+}
+.btnControls:active{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b #03a9f4);;
+}
+
+.data{
+    font-size: larger;
+}

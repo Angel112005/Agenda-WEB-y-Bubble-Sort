@@ -1,5 +1,4 @@
 import { agenda, bubbleSort, toArray } from '../controllers/dependencies.js';
-// import { bubbleSort } from '../models/Sort.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('guardarBtn');
@@ -31,14 +30,14 @@ function addContact() {
 
 function showContacts() {
     const listaContactos = document.getElementById('listaContactos');
-    listaContactos.innerHTML = ''; // Limpiar la lista antes de mostrar los contactos
+    listaContactos.innerHTML = ''; 
 
     if (agenda.getContactCount() === 0) {
         listaContactos.textContent = "No hay contactos para mostrar";
     } else {
         let currentContact = agenda.contacts.head;
         while (currentContact) {
-            listaContactos.innerHTML += "Nombre: " + currentContact.data.nombre + "<br>";
+            listaContactos.innerHTML += "Nombre (s): " + currentContact.data.nombre + "<br>";
             listaContactos.innerHTML += "Apellidos: " + currentContact.data.apellidos + "<br>";
             listaContactos.innerHTML += "Teléfono: " + currentContact.data.telefono + "<br><br>";
             currentContact = currentContact.next;
@@ -74,7 +73,7 @@ function mostrarContactosOrdenados(contacts) {
         listaContactos.textContent = "No hay contactos para mostrar";
     } else {
         for (let i = 0; i < contacts.length; i++) {
-            listaContactos.innerHTML += "Nombre: " + contacts[i].nombre + "<br>";
+            listaContactos.innerHTML += "Nombre (s): " + contacts[i].nombre + "<br>";
             listaContactos.innerHTML += "Apellidos: " + contacts[i].apellidos + "<br>";
             listaContactos.innerHTML += "Teléfono: " + contacts[i].telefono + "<br><br>";
         }
